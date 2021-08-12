@@ -1,0 +1,252 @@
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+ul {
+  padding: 0px !important;
+  width: 85%;
+}
+
+.menu-principal {
+  width: 100%;
+  background-color: #bcb8b1;
+  height: 80px;
+}
+
+main, content {
+  margin: 0 auto;
+  width: 980px;
+  position: relative;
+}
+
+.logo {
+  float: left;
+  padding: 16px;
+  width: 70%;
+}
+
+.redes-sociais ul li {
+  display: inline-block;
+  list-style: none;
+}
+
+.redes-sociais {
+  padding: 8px;
+  width: 20%;
+  float: right;
+}
+
+.header-2 {
+  background-color: #fff;
+  width: 980px;
+  margin: 0 auto;
+  padding: 5px;
+}
+
+.menu-urls {
+  height: 80px;
+  border-bottom: 3px solid #efefef;
+}
+
+.menu ul li {
+  display: inline-block;
+  color: #8b8b8b;
+  margin-left: 1px;
+  height: 25px;
+}
+
+.menu ul li:hover {
+  border-bottom: 2px solid #004b23;
+}
+
+.menu ul li a:hover {
+  color: #004b23;
+}
+
+.menu ul li a {
+  display: inline-block;
+  color: #8b8b8b;
+  padding: 1px 10px;
+  text-decoration: none;
+  font-size: 18px;
+  text-transform: initial;
+}
+
+.menu {
+  width: 65%;
+  float: left;
+}
+
+.busca {
+  text-align: end;
+  width: 25%;
+  float: right;
+}
+
+.busca input {
+  background-image: url("../img/busca.png");
+  background-repeat: no-repeat;
+  background-position: 96%;
+  height: 15px;
+  padding: 12px;
+  width: 150px;
+  margin-top: 5px;
+  border: 1px solid #d6d6d6;
+}
+
+.col-100 {
+  width: 100%;
+  float: left;
+  position: relative;
+}
+
+button.slick-prev {
+  font-size: 0px;
+  border: none;
+  width: 25px;
+  height: 51px;
+  z-index: 9;
+  background-color: transparent;
+  position: absolute;
+  background-image: url(../img/anterior.png);
+  top: 35%;
+  left: 14%;
+}
+button.slick-next {
+  font-size: 0px;
+  border: none;
+  width: 25px;
+  height: 51px;
+  z-index: 9;
+  background-color: transparent;
+  position: absolute;
+  background-image: url(../img/proximo.png);
+  top: 35%;
+  right: 14%;
+}
+
+.slick-dots li button {
+ font-size: 0px;
+ border: 5px solid #fff;
+ width: 26px;
+ height: 26px;
+ background: transparent;
+ border-radius: 50%;
+ cursor: pointer;
+}
+
+.slick-dots li {
+ display: inline-block;
+ padding-left: 10px;
+} 
+
+.slick-dots {
+  margin:0 auto;
+  width: 50%;
+  position:absolute;
+  left: 45%;
+  top: 753px;
+}
+
+li.slick-active button {
+  background: #004b23;
+}
+
+.slick-list{
+  width:100%! important;
+}
+
+.slick-initialized {
+  overflow:hidden;
+}
+.texto-destaque{
+  text-align: center;
+}
+.texto-destaque p {
+  font-size: 15px;
+  color: #9a9a9a
+}
+
+.col-3 {
+padding-left: 15px;
+padding-right: 15px;  
+width: 29%;
+float: left;
+position: relative;
+}
+
+.bloco-imagem img {
+  margin: 0 auto;
+  width: 55%;
+  height: 100%;
+  position: relative;
+  float:right;
+  }
+  
+.bloco-imagem {
+  height: 200px;
+  width: 290px;
+  border: 1px solid #c5c5c5;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-left: 10px;
+  }
+
+.bloco-imagem p {
+  text-align: left;
+}
+
+.bloco-texto{
+  margin-top: 1em;
+}
+
+h3 {
+  font-weight: normal!important;
+}
+
+
+.bloco-imagens-texto {
+  background-color: #eeeeee;
+}
+
+.bloco-imagens-texto:before {
+  width: 100%;
+  display: inline-block;
+  content: '';
+  height: 52px;
+  background: #ffffff;
+  background-image: url('../img/setinha.png');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.bloco-imagens-texto:after {
+  width: 100%;
+  display: inline-block;
+  content: '';
+  height: 70px;
+  background: #eeeeee;
+} 
+
+.cadastro {
+  color: #000804;
+  height: 200px;
+  text-align: center;
+}
+
+.cadastro p {
+  font-size: 20px;
+}
+
+.contato {
+  background-image: url('../img/footer2.png');
+  color: #ffffff;
+  height: 90px;
+  text-align: center;
+}
+
+.contato p {
+  padding: 5px;
+}

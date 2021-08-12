@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href=" {{ url_for('static', filename='css/styles.css') }} "
+    />
+    <title>Cadastro</title>
+  </head>
+
+  <body>
+    <nav>
+      <a href="/">
+        <img src=" {{ url_for('static', filename='img/logo.png') }} " alt="" />
+      </a>
+
+      <ul>
+        <li>
+          <a href="/novoproduto">Novo Pedido</a>
+        </li>
+      </ul>
+    </nav>
+
+    <section id="cadastro">
+      <h3>Cadastro de Pedidos</h3>
+
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Produto</th>
+            <th>Descrição</th>
+            <th>E-mail</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          {% for m in produtos %}
+          <tr>
+            <td>{{m.id}}</td>
+            <td>{{m.produto}}</td>
+            <td>{{m.descricao}}</td>
+            <td>{{m.email}}</td>
+            <td>
+              <a href="/editar/{{m.id}}">Editar</a>
+              <a href="/{{m.id}}">Apagar</a>
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </section>
+
+    {% if cadastroDelete != undefined %}
+    <section class="modal">
+      <div id="card">
+        <a href="/cadastro" id="fechar"
+          ><i class="fa fa-times" aria-hidden="true"></i
+        ></a>
+        <h2>Confirmação</h2>
+        <hr />
+
+        <p>Deseja realmente apagar o cadastro: {{cadastroDelete.nome}}</p>
+        <div>
+          <a href="/cadastro">Não</a>
+          <a href="/delete/{{cadastroDelete.id}}">Sim</a>
+        </div>
+      </div>
+    </section>
+    {% endif %}
+
+    <footer>
+      <hr />
+      <p>
+        <center>
+          Todos os direitos reservados: Marcelo Rocha Machado&copy
+        </center>
+      </p>
+    </footer>
+  </body>
+</html>

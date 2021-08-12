@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href=" {{ url_for('static', filename='css/styles.css') }} "
+    />
+    <title>Edição de Produtos</title>
+  </head>
+  <body>
+
+    <section id="cadastro">
+      <h3>Edição de Pedidos</h3>
+
+      <table>
+          <thead>
+              <tr>
+                  <th>ID</th>
+                  <th>Produto</th>
+                  <th>Descrição</th>
+                  <th>E-mail</th>
+                  <th>Ações</th>
+              </tr>
+          </thead>
+
+          <tbody>
+              {% for m in produtos %}
+              <tr>
+                  <td>{{m.id}}</td>
+                  <td>{{m.produto}}</td>
+                  <td>{{m.descricao}}</td>
+                  <td>{{m.email}}</td>
+                  <td>
+                      <a href="/editar/{{m.id}}">Editar</a>
+                      <a href="/{{m.id}}">Apagar</a>
+                  </td>
+              </tr>
+              {% endfor %}
+          </tbody>
+      </table>
+  </section>
+
+  <section id="newprod">
+    <div id="card">
+    <h4>Editar</h4>
+
+    <form action="/editar/{{cadastro.id}}" method="POST">
+      <div class="label-float">
+        <input type="text" name="produto" id="produto" value="{{cadastro.produto}}"/>
+        <label for="produto">Produto</label>
+      </div>
+
+      <div class="label-float">
+        <input type="text" name="descricao" id="descricao" value="{{cadastro.descricao}}" />
+        <label for="descricao">Descrição</label>
+      </div>
+
+      <div class="label-float">
+        <input type="text" name="email" id="email" value="{{cadastro.email}}" />
+        <label for="email">E-mail</label>
+      </div>
+
+      <div class="justify-center">
+        <button type="submit">Editar</button>
+      </div>
+  </div>
+    </form>
+  </section>
+
+  </body>
+</html>

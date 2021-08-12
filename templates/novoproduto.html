@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href=" {{ url_for('static', filename='css/styles.css') }} "/>
+    <title>Cadastro de Produtos</title>
+  </head>
+  <body>
+    <section id="newprod">
+      <div id="card">
+      <h4>Novo Item</h4>
+
+      <form action="/add" method="POST">
+        <div class="label-float">
+          <input type="text" name="produto" id="produto" />
+          <label for="produto">Produto</label>
+        </div>
+
+        <div class="label-float">
+          <input type="text" name="descricao" id="descricao" />
+          <label for="descricao">Descrição</label>
+        </div>
+
+        <div class="label-float">
+          <input type="text" name="email" id="email" />
+          <label for="email">E-mail</label>
+        </div>
+
+        <div class="justify-center">
+          <button type="submit">Cadastrar</button>
+        </div>
+    </div>
+      </form>
+    </section>
+  </body>
+</html>
